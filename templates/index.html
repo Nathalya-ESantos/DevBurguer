@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBurger - Flex & Grid 2025</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+<!-- Incluir os links para CSS (pode ter mais arquivos ou arquivos com nomes diferentes) -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+
+  <!-- Header e Navbar -->
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo">DevBurger</a>
+
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__item">
+              <a href="#" class="header__link">Home</a>
+            </li>
+            <li class="header__item">
+              <a href="#menu" class="header__link">Cardápio</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Sobre</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Contato</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__social">
+          <a href="#" class="header__icon"
+            ><span class="material-symbols-outlined">thumb_up</span></a
+          >
+          <a href="#" class="header__icon"
+            ><span class="material-symbols-outlined">photo_camera</span></a
+          >
+        </div>
+
+        <button class="header__toggle">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
+    
+<!-- Banner -->
+    <section class="banner">
+      <div class="banner__content">
+        <h1 class="banner__title">
+          Code & <span class="banner__title--highlight">Flavor</span>
+        </h1>
+        <p class="banner__subtitle">
+          O melhor hambúrguer da cidade compilado para você.
+        </p>
+      </div>
+    </section>
+
+<!-- Escolha Rápida  -->
+    <section class="categories">
+      <div class="categories__container">
+        <h2 class="categories__title">Escolha Rápida</h2>
+
+        <div class="categories__list">
+          <div class="category-item">
+            <img
+              src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=200"
+              alt="Lanche 1"
+              class="category-item__img"
+            />
+            <a href="#lanche-1" class="button button--small">EU QUERO</a>
+          </div>
+
+          <div class="category-item">
+            <img
+              src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=200"
+              alt="Lanche 2"
+              class="category-item__img"
+            />
+            <a href="#lanche-2" class="button button--small">EU QUERO</a>
+          </div>
+
+          <div class="category-item">
+            <img
+              src="https://images.pexels.com/photos/3219483/pexels-photo-3219483.jpeg?auto=compress&cs=tinysrgb&w=200"
+              alt="Lanche 3"
+              class="category-item__img"
+            />
+            <a href="#lanche-3" class="button button--small">EU QUERO</a>
+          </div>
+
+          <div class="category-item">
+            <img
+              src="https://images.pexels.com/photos/12034622/pexels-photo-12034622.jpeg"
+              alt="Lanche 4"
+              class="category-item__img"
+            />
+            <a href="#lanche-4" class="button button--small">EU QUERO</a>
+          </div>
+
+          <div class="category-item">
+            <img
+              src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=200"
+              alt="Lanche 5"
+              class="category-item__img"
+            />
+            <a href="#lanche-5" class="button button--small">EU QUERO</a>
+          </div>
+
+          <div class="category-item">
+            <img
+              src="https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=200"
+              alt="Lanche 6"
+              class="category-item__img"
+            />
+            <a href="#lanche-6" class="button button--small">EU QUERO</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Produtos do Menu -->
+    <section class="products" id="menu">
+      <div class="products__container">
+        <h2 class="products__title">Nossos Destaques</h2>
+
+        <div class="products__grid">
+          <article class="card" id="lanche-1">
+            <div class="card__image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Classic Dev"
+                class="card__image"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Classic Dev</h3>
+              <p class="card__description">
+                Pão brioche, carne suculenta e queijo derretido.
+              </p>
+              <div class="card__footer">
+                <span class="card__price">R$ 25,00</span>
+                <button class="button button--small">Comprar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="lanche-2">
+            <div class="card__image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Double Stack"
+                class="card__image"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Double Stack</h3>
+              <p class="card__description">
+                Dois hambúrgueres, bacon crocante e molho especial.
+              </p>
+              <div class="card__footer">
+                <span class="card__price">R$ 38,00</span>
+                <button class="button button--small">Comprar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="lanche-3">
+            <div class="card__image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/3219483/pexels-photo-3219483.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Veggie Script"
+                class="card__image"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Veggie Script</h3>
+              <p class="card__description">
+                Hambúrguer de grão de bico com salada fresca.
+              </p>
+              <div class="card__footer">
+                <span class="card__price">R$ 30,00</span>
+                <button class="button button--small">Comprar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="lanche-4">
+            <div class="card__image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/12034622/pexels-photo-12034622.jpeg"
+                alt="Java Chicken"
+                class="card__image"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Java Chicken</h3>
+              <p class="card__description">
+                Frango empanado crocante com alface e maionese.
+              </p>
+              <div class="card__footer">
+                <span class="card__price">R$ 28,00</span>
+                <button class="button button--small">Comprar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="lanche-5">
+            <div class="card__image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Python Onion"
+                class="card__image"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Python Onion</h3>
+              <p class="card__description">
+                Anéis de cebola, barbecue e queijo cheddar.
+              </p>
+              <div class="card__footer">
+                <span class="card__price">R$ 33,00</span>
+                <button class="button button--small">Comprar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="lanche-6">
+            <div class="card__image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="React Salad"
+                class="card__image"
+              />
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">React Salad</h3>
+              <p class="card__description">
+                Uma opção leve e reativa para o seu almoço.
+              </p>
+              <div class="card__footer">
+                <span class="card__price">R$ 27,00</span>
+                <button class="button button--small">Comprar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px">
+          <a href="#menu" class="button button--primary"
+            >Voltar para Destaques</a
+          >
+        </div>
+      </div>
+    </section>
+
+<!-- Rodapé -->
+    <footer class="footer">
+      <p class="footer__text">
+        DevBurger © 2025. Todos os direitos reservados.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+/* Para usar variaveis é só utilizar var(--cor-texto); */
+
+
+html {
+    --cor-primaria: #f5331e; 
+    --cor-secundaria: #502517;
+    --cor-texto-titulo: #e7a62f;     
+    --cor-texto-subtitulo: #e7d9ba;
+     
+  }
+  
