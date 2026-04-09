@@ -17,10 +17,13 @@
     />
 
 <!-- Incluir os links para CSS (pode ter mais arquivos ou arquivos com nomes diferentes) -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/variables.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/variables.css" />
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/media.css" />
+    <link rel="stylesheet" href="static/css/reset.css" />
+    {% block css_adicional %}
+    {% endblock %}
   </head>
   <body>
 
@@ -60,9 +63,9 @@
         </button>
       </div>
     </header>
-
-    {% block conteudo %} aqui é onde vai todo conteudo do site {% endblock %}
     
+    {% block conteudo %} {% endblock %}
+
 <!-- Rodapé -->
     <footer class="footer">
       <p class="footer__text">
