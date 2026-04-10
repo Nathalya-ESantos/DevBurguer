@@ -11,8 +11,9 @@ def pagina_inicial():
     destaques = rec_destaq()
     return render_template("index.html", produtos = produtos, destaques = destaques)
 
-@app.route("/produto")
+@app.route("/produto/<codigo>")
 def pagina_produto():
+    produto = rec_produto
 
     return render_template("produto.html")
 

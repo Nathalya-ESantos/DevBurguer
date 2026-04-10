@@ -27,3 +27,13 @@ def rec_destaq():
         conexao.close()
 
         return produtos
+
+def rec_produto(codigo:int):
+        conexao, cursor = conectar()
+        cursor.execute("""SELECT codigo, produto, descricao, destaque, preco, foto, disponibilidade FROM Produtos WHERE codigo = %s""", [codigo])
+
+        produtos =  cursor.fetchone()
+
+        conexao.close()
+        return produtos
+
