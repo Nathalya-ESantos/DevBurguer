@@ -1,4 +1,4 @@
-from database.conexao import conectar
+from  database.conexao import conectar
 
 def recuperar():
     # passo 1 e 2 ja feito
@@ -23,17 +23,16 @@ def rec_destaq():
 
         produtos =  cursor.fetchall()
 
-        # fechar a conexão
+       # fechar a conexão
         conexao.close()
 
         return produtos
 
-def rec_produto(codigo:int):
+def rec_produto(codigo:int):  
         conexao, cursor = conectar()
         cursor.execute("""SELECT codigo, produto, descricao, destaque, preco, foto, disponibilidade FROM Produtos WHERE codigo = %s""", [codigo])
 
-        produtos =  cursor.fetchone()
-
+        produto = cursor.fetchone()
         conexao.close()
-        return produtos
 
+        return produto

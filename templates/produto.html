@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+
+{%  block css_adicional %}
+<link rel="stylesheet" href="static/css/produto.css">
+{% endblock %}
+
+{% block conteudo %}
+       <div class="product-container">
+    <div class="image-section">
+
+        <img src="{{produto.foto}}" alt="Hambúrguer" class="main-img">
+        <div class="dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h1 class="product-title">{{produto.produto}}</h1>
+       
+
+        <p class="description">
+            {{produto.descricao}}
+        </p>
+        <a href="#" class="more-details">VER MAIS DETALHES</a>
+
+        <div class="price-container">
+            <div class="old-price"> 1{{produto.preco}}</div>
+            <div class="current-price">
+                {{produto.preco}} <span class="unit">/un</span>
+            </div>
+        </div>
+
+        <div class="stock-alert">
+            <div class="stock-icon">📍</div>
+            <div class="stock-text">
+                <b>Sentimos Muito!</b>
+                <span>Produto fora da área de entrega para sua localização</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

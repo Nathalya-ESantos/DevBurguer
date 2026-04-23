@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{%  block css_adicional %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'static/css/cadastro_login.css') }}">
+{% endblock %}
+
+{% block conteudo %}
+<div class="container">
+    <div id="login-form">
+        <h2>Burger Mania</h2>
+        <p>Bateu a fome? Entre e peça o seu!</p>
+        
+        <div class="input-group">
+            <label>Usuário</label>
+            <input type="text" placeholder="Seu usuário">
+        </div>
+        
+        <div class="input-group">
+            <label>Senha</label>
+            <input type="password" placeholder="Sua senha">
+        </div>
+
+        <button type="submit">ENTRAR</button>
+        
+        <div class="toggle-link">
+            Ainda não tem conta? <span onclick="toggleForm()">Cadastre-se</span>
+        </div>
+    </div>
+
+    <div id="register-form" class="hidden">
+        <h2>Criar Conta</h2>
+        <p>Faça parte do nosso clube do hambúrguer!</p>
+
+        <div class="input-group">
+            <label>Nome Completo</label>
+            <input type="text" placeholder="Ex: João Silva">
+        </div>
+
+        <div class="input-group">
+            <label>Usuário</label>
+            <input type="text" placeholder="Escolha um nome de usuário">
+        </div>
+        
+        <div class="input-group">
+            <label>Senha</label>
+            <input type="password" placeholder="Crie uma senha forte">
+        </div>
+
+        <button type="submit">CADASTRAR</button>
+        
+        <div class="toggle-link">
+            Já possui conta? <span onclick="toggleForm()">Fazer Login</span>
+        </div>
+    </div>
+    
+   
+</div>
+
+<script>
+    function toggleForm() {
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        
+        loginForm.classList.toggle('hidden');
+        registerForm.classList.toggle('hidden');
+    }
+</script>
+{% endblock %}
+
+
+          

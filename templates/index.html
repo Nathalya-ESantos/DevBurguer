@@ -14,30 +14,32 @@
     </section>
 
 <!-- Escolha Rápida  -->
-    {% for produto in produtos %}
+   
     <section class="categories">
       <div class="categories__container">
+         {% for destaque in destaques %}
         <h2 class="categories__title"></h2>
         
         <div class="categories__list">
           <div class="category-item">
             <img
-              src="{{ produto.foto }}"
-              alt="Lanche 1"
+              src="{{ destaque.foto }}"
+              alt="{{ destaque.produto }}"
+              
               class="category-item__img"
             />
             
-            <a href="#lanche-1" class="button button--small">EU QUERO</a>
+            <a href="{{ destaque.codigo }}" class="button button--small">EU QUERO</a>
           </div>
-          
+          {% endfor %}
       </div>
     </section>
-    {% endfor %}
+    
 
 <!-- Produtos do Menu -->
     <section class="products" id="menu">
       <div class="products__container">
-        <h2 class="products__title">Nossos Destaques</h2>
+        <h2 class="products__title">Nosso Cardapio</h2>
 
         <div class="products__grid">
 
@@ -51,7 +53,7 @@
               />
             </div>
             <div class="card__body">
-              <h3 class="card__title">{{ produto.produto }}</h3>
+              <h3 class="card__title">{{produto.produto}}</h3>
               <p class="card__description">
                 {{ produto.descricao }}
               </p>
@@ -72,3 +74,6 @@
       </div>
     </section>
 {% endblock %}
+
+
+
