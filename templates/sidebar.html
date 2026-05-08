@@ -1,0 +1,29 @@
+<div class="layout">
+    <main class="menu">
+        <h2>Cardápio 🍔</h2>
+        <div class="product-grid">
+            <div class="card">
+                <h3>Classic Burger</h3>
+                <p>Pão, carne 160g e queijo.</p>
+                <span>R$ 25.00</span>
+                <button onclick="addToCart('Classic Burger', 25.00)">Adicionar</button>
+            </div>
+            <div class="card">
+                <h3>Bacon Smash</h3>
+                <p>Pão, 2x carnes 80g e muito bacon.</p>
+                <span>R$ 32.00</span>
+                <button onclick="addToCart('Bacon Smash', 32.00)">Adicionar</button>
+            </div>
+        </div>
+    </main>
+
+    <aside class="cart-sidebar">
+        <h3>Seu Pedido 🛒</h3>
+        <ul id="cart-items">
+            </ul>
+        <div class="cart-footer">
+            <p>Total: <strong>R$ <span id="cart-total">0.00</span></strong></p>
+            <button class="btn-finish" onclick="checkout()">Finalizar Pedido</button>
+        </div>
+    </aside>
+</div>

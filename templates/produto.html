@@ -1,15 +1,15 @@
 {% extends "layout.html" %}
 
-
-{%  block css_adicional %}
-<link rel="stylesheet" href="static/css/produto.css">
+{% block css_adicional %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/produto.css') }}">
 {% endblock %}
 
 {% block conteudo %}
-       <div class="product-container">
+<div class="product-container">
     <div class="image-section">
-
-        <img src="{{produto.foto}}" alt="Hambúrguer" class="main-img">
+        {# Imagem agora é dinâmica #}
+        <img src="{{ produto.foto }}" alt="{{ produto.produto }}" class="main-img">
+        
         <div class="dots">
             <div class="dot active"></div>
             <div class="dot"></div>
@@ -18,28 +18,37 @@
     </div>
 
     <div class="info-section">
-        <h1 class="product-title">{{produto.produto}}</h1>
-       
+        {# Título dinâmico #}
+        <h1 class="product-title">{{ produto.produto }}</h1>
 
         <p class="description">
-            {{produto.descricao}}
+            {{ produto.descricao }}
         </p>
+        
         <a href="#" class="more-details">VER MAIS DETALHES</a>
 
         <div class="price-container">
-            <div class="old-price"> 1{{produto.preco}}</div>
+            {# Removi os valores fixos "R$ 32,00" para não repetir #}
+            {% if produto.preco_antigo %}
+                <div class="old-price">R$ {{ produto.preco_antigo }}</div>
+            {% endif %}
+            
             <div class="current-price">
-                {{produto.preco}} <span class="unit">/un</span>
+                R$ {{ produto.preco }} <span class="unit">/un</span>
             </div>
         </div>
 
+        {# Alerta de estoque/entrega #}
         <div class="stock-alert">
             <div class="stock-icon">📍</div>
             <div class="stock-text">
-                <b>Sentimos Muito!</b>
-                <span>Produto fora da área de entrega para sua localização</span>
+                <b>Disponibilidade</b>
+                <span>Verifique o tempo de entrega para sua região.</span>
             </div>
         </div>
-    </div>
+        
+    
+
+</div>
 </div>
 {% endblock %}

@@ -53,15 +53,14 @@ def logar_usuario():
 def api_get_carrinho():
     usuario_logado = session.get("usuario_logado")
 
-
+    
     # jsonify: Traduz os dados do Python/Banco para o formato JSON (texto universal).
     # O Front-end recebe este JSON e consegue desenhar os itens na tela.
     # 200 = Sucesso | 401 = Não autorizado (Erro de Login).
     if "usuario_logado" in session:
         usuario =session["usuario_logado"]["USUARIO"]
         carrinho = recuperar_carrinho(usuario)
-        return jsonify(carrinho), 200         
-
+        return jsonify(carrinho), 200
     else:
         return jsonify({"message": "Usuario não logado"}), 401
     
@@ -70,7 +69,7 @@ def api_get_carrinho():
 def api_post_carrinho():
 
    if "usuario_logado" in session:
-       usuario = session["usuario_logado"] ["usuario"]
+       usuario = session["usuario_logado"] ["USUARIO"]
        dados_json = request.get_json()
        codigo_produto = dados_json.get("cod_produto")
        quantidade = dados_json.get("quantidade")
