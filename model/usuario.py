@@ -15,13 +15,14 @@ class Usuario:
 
         conexao.commit()
         conexao.close()
+
     @staticmethod
-    def logar(usuario:str, senha:str)->dict:
+    def logar(usuario: str, senha: str) -> dict:
         conexao, cursor = conectar()
         cursor.execute("""
-                        SELECT * FROM WHERE usuarios = %s AND senha %s;
-                        """, [usuario, senha])
+            SELECT * FROM Usuarios WHERE usuario = %s AND senha = %s;
+        """, (usuario, senha))
         
-        resultado = cursor.fetchone
+        resultado = cursor.fetchone()
         conexao.close()
         return resultado
